@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --fs-body: 1.6rem;
+  --fs-nav: 2rem;
+
+  --fc-primary: #fff;
+  --color-primary: #3c0085;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100vh;
+  background: linear-gradient(#2d0163 50%, #1f1f1f 50%);
+
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 3.2rem;
+
+  font-size: var(--fs-nav);
+
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--fc-primary);
+}
+
+.search-box {
+  font-size: var(--fs-body);
+
+  width: 90vw;
+  max-width: 60rem;
+  padding: 4.8rem 2.9rem;
+  background-color: #292833;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 1rem;
+  box-shadow: 1.9rem 3.2rem 4.8rem rgba(0, 0, 0, 0.2);
+}
+
+.search-container {
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  gap: 1.9rem;
+}
+
+.search-container input,
+.search-container button {
+  font-size: var(--fs-body);
+  outline: none;
+  border-radius: 0.5rem;
+
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+}
+
+.search-container input {
+  background-color: transparent;
+  border: 1px solid #a0a0a0;
+  padding: 1.2rem;
+}
+
+.search-container input:focus {
+  border-color: #ffffff;
+}
+
+.search-container button {
+  background-color: var(--color-primary);
+  border: none;
+  cursor: pointer;
+}
+
+.results {
+  color: #fff;
+
+  padding: 2rem 0;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 2.4rem;
+  letter-spacing: 0.1rem;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+p {
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 1.8em;
+  text-align: justify;
+  color: #a0a0a0;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  text-align: center;
+  align-items: center;
+
+  margin-bottom: 3rem;
+}
+
+.info img {
+  width: 100%;
+}
+
+.movie-info {
+  padding: 0 2rem;
+  display: grid;
+  place-items: center;
+
+  gap: 1rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.rating img {
+  width: 1.9rem;
+}
+
+.rated-year-duration {
+  font-weight: 300;
+  font-size: 1.5rem;
+  color: #a0a0a0;
+}
+
+.genre {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.genre span {
+  border: 1px solid #a0a0a0;
+  padding: 0.6rem 2.6rem;
+  border-radius: 0.6rem;
+}
+
+.genre,
+.rated-year-duration {
+  display: flex;
+  gap: 2rem;
+}
+
+.plot-cast {
+  display: grid;
+  gap: 2rem;
+}
+
+.hide {
+  display: none;
+}
