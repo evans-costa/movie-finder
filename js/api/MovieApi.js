@@ -1,4 +1,4 @@
-const API_KEY = "fb1e69f1";
+import { API_KEY } from "./key.js";
 
 export class MovieApi {
   static async search(movieName) {

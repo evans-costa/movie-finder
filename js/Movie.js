@@ -1,4 +1,4 @@
-import { MovieApi } from "./api.js";
+import { MovieApi } from "./api/MovieApi.js";
 
 export class Movie {
   constructor(root) {
@@ -10,7 +10,9 @@ export class Movie {
     try {
       const movie = await MovieApi.search(movieName);
 
-      if (this.root.querySelector(".search-container input").value === "") {
+      const isInputEmpty = this.root.querySelector(".search-container input").value === "";
+
+      if (isInputEmpty) {
         throw new Error("Please, enter a movie name.");
       }
 
@@ -88,6 +90,11 @@ export class Movie {
     this.result.querySelectorAll("#movie").forEach((element) => {
       element.remove();
     });
-    this.result.querySelector(".error-msg").remove();
+
+    const errorMessage = document.querySelector(".error-msg");
+
+    if (errorMessage) {
+      errorMessage.remove();
+    }
   }
 }
