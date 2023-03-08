@@ -113,7 +113,7 @@ p {
   color: #a0a0a0;
 }
 
-.info {
+.movie-info {
   display: grid;
   grid-template-columns: 4fr 8fr;
   text-align: center;
@@ -122,12 +122,12 @@ p {
   margin-bottom: 3rem;
 }
 
-.info img {
+.movie-info img {
   width: 100%;
 }
 
-.movie-info {
-  padding: 0 2rem;
+.movie-details {
+  padding-left: 2rem;
   display: grid;
   place-items: center;
 
@@ -176,6 +176,6 @@ p {
   gap: 2rem;
 }
 
-.hide {
-  display: none;
+.error-msg {
+  text-align: center;
 }
