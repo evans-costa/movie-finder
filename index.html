@@ -3,26 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet" />
-    <script src="js/main.js" type="module" defer></script>
+    <script src="routes/main.js" type="module"></script>
+    <script src="js/searchMovie/main.js" type="module"></script>
     <title>Movie Finder</title>
   </head>
   <body>
     <nav>
-      <a href="/search">Search</a>
-      <a href="/favorites">Favorites</a>
+      <a href="/" onclick="route()">
+        <img src="/images/search-icon.svg" alt="Search icon button" />
+        Search
+      </a>
+      <a href="/watchlist" onclick="route()">
+        <img src="/images/bookmark-icon.svg" alt="Bookmark icon button" />
+        Watchlist
+      </a>
     </nav>
 
-    <div class="search-box">
-      <div class="search-container">
-        <input type="text" name="search" id="search" />
-        <button class="search-button">Search</button>
-      </div>
-
-      <div class="results"></div>
-    </div>
+    <div id="page"></div>
   </body>
 </html>

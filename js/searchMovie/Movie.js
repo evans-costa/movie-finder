@@ -1,4 +1,4 @@
-import { MovieApi } from "./api/MovieApi.js";
+import { MovieApi } from "../../api/MovieApi.js";
 
 export class Movie {
   constructor(root) {
@@ -30,39 +30,37 @@ export class Movie {
     const resultDiv = document.createElement("div");
 
     resultDiv.innerHTML = `
-    <div id="movie">
-      <div class="movie-info">
-        <img
-          src=""
-          alt=""
-        />
-        <div class="movie-details">
-          <h2 class="title"></h2>
-          <div class="rating">
-            <img src="images/star.png" alt="rating star" />
-            <span></span>
+      <div id="movie">
+        <div class="movie-info">
+          <img
+            src=""
+            alt=""
+          />
+          <div class="movie-details">
+            <h2 class="title"></h2>
+            <div class="rating">
+              <img src="images/star.png" alt="rating star" />
+              <span></span>
+            </div>
+            <div class="rated-year-duration">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="genre"></div>
           </div>
-          <div class="rated-year-duration">
-            <span></span>
-            <span></span>
-            <span></span>
+        </div>
+        <div class="plot-cast">
+          <div class="plot">
+            <h3>Plot:</h3>
+            <p></p>
           </div>
-          <div class="genre">
+          <div class="cast">
+            <h3>Cast:</h3>
+            <p></p>
           </div>
         </div>
       </div>
-      <div class="plot-cast">
-        <div class="plot">
-          <h3>Plot:</h3>
-          <p>
-          </p>
-        </div>
-        <div class="cast">
-          <h3>Cast:</h3>
-          <p></p>
-        </div>
-      </div>
-    </div>
     `;
 
     return resultDiv;
