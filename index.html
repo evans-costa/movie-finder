@@ -7,22 +7,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet" />
-    <script src="routes/main.js" type="module"></script>
     <script src="js/searchMovie/main.js" type="module"></script>
     <title>Movie Finder</title>
   </head>
   <body>
     <nav>
-      <a href="/" onclick="route()">
+      <a href="/">
         <img src="/images/search-icon.svg" alt="Search icon button" />
         Search
       </a>
-      <a href="/watchlist" onclick="route()">
+      <a href="/pages/watchlist.html">
         <img src="/images/bookmark-icon.svg" alt="Bookmark icon button" />
         Watchlist
       </a>
     </nav>
 
-    <div id="page"></div>
+    <div id="page">
+      <div class="search-box">
+        <div class="search-container">
+          <input type="text" name="search" id="search" placeholder="Enter a movie name" />
+          <button class="search-button">Search</button>
+        </div>
+
+        <div class="results"></div>
+      </div>
+    </div>
   </body>
 </html>

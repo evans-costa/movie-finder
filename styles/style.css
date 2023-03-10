@@ -16,10 +16,6 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   height: 100vh;
   background: linear-gradient(#2d0163 50%, #1f1f1f 50%);
 
@@ -34,7 +30,6 @@ nav {
   font-size: var(--fs-nav);
 
   padding: 2rem;
-  margin-bottom: 2rem;
 }
 
 nav a {
@@ -46,17 +41,23 @@ nav a {
   color: var(--fc-primary);
 }
 
+#page {
+  height: calc(100vh - 10rem);
+  display: grid;
+  place-items: center;
+}
+
 .search-box {
   font-size: var(--fs-body);
 
   width: 90vw;
+  max-height: 80vh;
   max-width: 60rem;
-  padding: 4.8rem 2.9rem;
+  padding: 4.9rem 2.9rem;
+  overflow: auto;
+
   background-color: #292833;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
+
   border-radius: 1rem;
   box-shadow: 1.9rem 3.2rem 4.8rem rgba(0, 0, 0, 0.2);
 }
@@ -120,8 +121,7 @@ p {
 .movie-info {
   display: grid;
   grid-template-columns: 4fr 8fr;
-  text-align: center;
-  align-items: center;
+  place-items: center;
 
   margin-bottom: 3rem;
 }
@@ -131,7 +131,6 @@ p {
 }
 
 .movie-details {
-  padding-left: 2rem;
   display: grid;
   place-items: center;
 
@@ -182,4 +181,31 @@ p {
 
 .error-msg {
   text-align: center;
+}
+
+@media (min-width: 320px) and (max-width: 440px) {
+  .search-box {
+    padding: 0 2rem;
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+
+  .search-container {
+    grid-template-columns: 1fr;
+    padding-top: 2rem;
+  }
+
+  .search-container button {
+    padding: 1.2rem;
+  }
+
+  .movie-info {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+
+  .movie-info > img {
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
 }
