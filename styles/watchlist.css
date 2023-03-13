@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --fs-body: 1.6rem;
+  --fs-nav: 2rem;
+
+  --fc-primary: #fff;
+  --color-primary: #3c0085;
+
+  --bg-table: #292833;
+  --bg-table-header: hsl(268, 73%, 13%);
+  --bg-table-odd: hsla(262, 61%, 6%, 0.5);
+  --bg-table-even: hsl(266, 66%, 7%);
+
+  --border-table: #5600c0;
+  --border-table-odd: #2d016b;
+  --border-table-even: #2c005f;
+
+  --danger-button: #c43333;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(#2d0163 50%, #1f1f1f 50%);
+
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 3.2rem;
+
+  font-size: var(--fs-nav);
+
+  padding: 2rem;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+
+  gap: 0.8rem;
+  text-decoration: none;
+  color: var(--fc-primary);
+}
+
+#page {
+  height: calc(100vh - 10rem);
+  display: grid;
+  place-items: center;
+
+  color: var(--fc-primary);
+
+  max-width: 112rem;
+  margin: 0 auto;
+}
+
+table {
+  border-spacing: 0;
+  border-radius: 1.2rem;
+  border: 1px solid var(--border-table);
+
+  background-color: var(--bg-table);
+
+  border-radius: 1rem;
+  box-shadow: 1.9rem 3.2rem 4.8rem rgba(0, 0, 0, 0.2);
+
+  width: 100%;
+}
+
+table * {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+thead th {
+  background-color: var(--bg-table-header);
+
+  text-align: left;
+  padding: 1.6rem 4rem;
+}
+
+thead th:first-child {
+  border-top-left-radius: 1.2rem;
+}
+
+thead th:last-child {
+  border-top-right-radius: 1.2rem;
+}
+
+tbody td {
+  padding: 2.4rem 4rem;
+}
+
+tbody tr:nth-child(odd) td {
+  background-color: var(--bg-table-odd);
+  border-bottom: 1px solid var(--border-table-odd);
+}
+
+tbody tr:nth-child(even) td {
+  background-color: var(--bg-table-even);
+  border-bottom: 1px solid var(--border-table-even);
+}
+
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 1.2rem;
+}
+
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 1.2rem;
+}
+
+td.movie-title {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+td.movie-title img {
+  border-radius: 10%;
+  object-fit: cover;
+
+  width: 5.6rem;
+}
+
+tbody td.action button {
+  border: none;
+  background-color: transparent;
+
+  color: var(--danger-button);
+
+  cursor: pointer;
+}
